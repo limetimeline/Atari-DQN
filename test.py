@@ -65,9 +65,9 @@ def pre_processing(observe):
 
 if __name__ == "__main__":
     # 환경 세팅
-    # env = gym.make("BreakoutDeterministic-v4")
-    env = gym.make("SpaceInvaders-v4")
-    render = True
+    env = gym.make("BreakoutDeterministic-v4")
+    # env = gym.make("SpaceInvaders-v4")
+    render = True # 게임화면 보일지 여부 (True, False)
 
     # 테스트를 위한 에이전트 생성
     state_size = (84, 84, 4)

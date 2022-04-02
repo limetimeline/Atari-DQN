@@ -1,2 +1,0 @@
-# Atari-DQN
-Reinforcement Learning

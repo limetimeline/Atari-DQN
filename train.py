@@ -37,7 +37,7 @@ class DQN(tf.keras.Model):
 # 브레이크아웃 예제에서의 DQN 에이전트
 class DQNAgent:
     def __init__(self, action_size, state_size=(84, 84, 4)):
-        self.render = True
+        self.render = True # 학습할 때 게임화면 보일지 여부 (True, False)
 
         # 상태와 행동의 크기 정의
         self.state_size = state_size
@@ -152,8 +152,9 @@ def pre_processing(observe):
 
 if __name__ == "__main__":
     # 환경과 DQN 에이전트 생성
-    # env = gym.make('BreakoutDeterministic-v4')
-    env = gym.make('SpaceInvaders-v4')
+    env = gym.make('BreakoutDeterministic-v4')
+    # env = gym.make('SpaceInvaders-v4')
+    # env = gym.make("BeamRider-v4")
     agent = DQNAgent(action_size=3)
 
     global_step = 0
